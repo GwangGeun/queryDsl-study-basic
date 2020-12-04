@@ -1,5 +1,5 @@
 plugins {
-	id 'org.springframework.boot' version '2.3.3.RELEASE'
+	id 'org.springframework.boot' version '2.4.0'
 	id 'io.spring.dependency-management' version '1.0.10.RELEASE'
 	//querydsl 추가
 	id "com.ewerk.gradle.plugins.querydsl" version "1.0.10"
@@ -39,7 +39,7 @@ test {
 	useJUnitPlatform()
 }
 
-//querydsl 추가 시작
+//querydsl
 def querydslDir = "$buildDir/generated/querydsl"
 querydsl {
 	jpa = true
@@ -54,4 +54,3 @@ configurations {
 compileQuerydsl {
 	options.annotationProcessorPath = configurations.querydsl
 }
-//querydsl 추가 끝

@@ -14,4 +14,13 @@ public class QuerydslApplication {
 		SpringApplication.run(QuerydslApplication.class, args);
 	}
 
+	/**
+	 * 다음 처럼 Bean 으로 JpaQueryFactory 를 등록해 놓고 써도 된다.
+	 *
+	 * @Bean
+	 * JpaQueryFactory jpaQueryFactory(EntityManager em){
+	 *     return new JPAQueryFactory(em);
+	 * }
+	 */
+
 }
